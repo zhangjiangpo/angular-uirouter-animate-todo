@@ -1,0 +1,69 @@
+.page{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    min-height:100%;
+}
+a.go-list{
+    display: block;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    color:#ffee00;
+}
+a{
+    text-decoration: none;
+}
+.pageIndex{
+    position:absolute;
+    width:100%;
+    background-color: #007aff;
+    min-height: 100%;
+}
+.pageList{
+    position:absolute;
+    width:100%;
+    background-color: #28a54c;
+    min-height: 100%;
+}
+.pageList a{
+    display: block;
+    height:30px;
+    line-height: 30px;
+    border:1px solid #ccc;
+    text-align: center;
+}
+.pageDetail{
+    position:absolute;
+    width:100%;
+    background-color: #de827b;
+    min-height:100%;
+}
+.page-back-btn{
+    background-color: #fff;
+    display: inline-block;
+    width:50px;
+    height:30px;
+    line-height: 30px;
+}
+/*前进*/
+.nextPage.ng-enter{animation: slideFromRight 0.5s ease-in-out;z-index:999;}
+.nextPage.ng-leave{animation: scaleDown 0.5s ease-in-out;z-index:888;}
+@keyframes slideFromRight {
+    from{-webkit-transform:translateX(100%);}
+    to{-webkit-transform:translateX(0);}
+}
+@keyframes scaleDown {
+    to{-webkit-transform:scale(0.8) translateX(-10%);opacity: 0.3;}
+}
+/*返回*/
+.prePage.ng-leave{animation: slideToRight 0.5s ease-in-out;z-index:999;}
+.prePage.ng-enter{animation: scaleUp 0.5s ease-in-out;z-index:888;}
+@keyframes slideToRight {
+    from{-webkit-transform:translateX(0);}
+    to{-webkit-transform:translateX(100%);}
+}
+@keyframes scaleUp {
+    from{-webkit-transform:scale(0.8) translateX(-10%);opacity: 0.5;}
+}
