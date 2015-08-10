@@ -1,51 +1,58 @@
-.page{
-    position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    min-height:100%;
-}
-a.go-list{
-    display: block;
-    height:40px;
-    line-height: 40px;
-    text-align: center;
-    color:#ffee00;
-}
-a{
-    text-decoration: none;
-}
-.pageIndex{
-    position:absolute;
-    width:100%;
-    background-color: #007aff;
-    min-height: 100%;
-}
-.pageList{
-    position:absolute;
-    width:100%;
-    background-color: #28a54c;
-    min-height: 100%;
-}
-.pageList a{
+page-view a{
     display: block;
     height:30px;
     line-height: 30px;
     border:1px solid #ccc;
     text-align: center;
 }
-.pageDetail{
-    position:absolute;
+.pageIndex{
+    background-color: #007aff;
+}
+.pageIndex a{
+    display: block;
+    height:30px;
+    line-height: 30px;
+}
+/*///////////////////////////////////////////////////////*/
+.page{
+    position: absolute;
+    left:0;
+    top:0;
     width:100%;
-    background-color: #de827b;
-    min-height:100%;
+    /*min-height:100%;*/
+}
+a{
+    text-decoration: none;
+}
+page-view{
+    position:relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    width:100%;
+    background-color: #ddd;
+    height: 100%;
+}
+.page-header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    z-index: 99;
+    background-color: #ccc;
 }
 .page-back-btn{
     background-color: #fff;
     display: inline-block;
     width:50px;
     height:30px;
+    margin:5px 0 0 10px;
     line-height: 30px;
+}
+.page-content-container{
+    margin-top:40px;
 }
 /*前进*/
 .nextPage.ng-enter{animation: slideFromRight 0.5s ease-in-out;z-index:999;}

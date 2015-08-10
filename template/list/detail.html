@@ -1,0 +1,9 @@
+<page-view ng-controller="detailCtrl">
+    <section class="page-header">
+        <page-back uihref="#/list" pageclass="detail"></page-back>
+    </section>
+    <section class="page-content-container">
+        <p><a href="#/list/detail/{{name}}/detailInfo/{{name}}">{{name}}</a></p>
+    </section>
+</page-view>
+<div class="page {{pageClass.detailInfo}}" ui-view="detailInfo"></div>
